@@ -29,7 +29,7 @@ func ConditionalStatements() {
 		fmt.Println("if with assignment statement")
 	}
 
-	num := 10
+	num := 10 //Conditional Check with if statement
 	if num%2 == 0 { //checks if number is even
 		fmt.Println(num, "is even")
 		return
