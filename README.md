@@ -118,5 +118,26 @@ Key features of gRPC include :
 1. Language-agnostic : gRPC supports multiple programming languages.
 2. Data Formatting (Protocol buffer or protobuf) is a very efficient binary encoding format -  gRPC is implemented through the use of protocol buffers and code generation, which provides a fast and efficient way to build client-server applications.
 3. Automatic code generation: gRPC generates client and server code based on the service definition specified in the protobuf files.
-4. Bi-directional streaming: It can use unary rpc's where here the client sends a single request and receives a single response. 
-  
+4. Bi-directional streaming: It can use unary rpc's where here the client sends a single request and receives a single response.
+
+Golang Datatypes list : 
+1.Primitive types :
+  - Bool (false) 
+  - Numeric type
+    - int default value (0)
+	  - float (0) 
+	  - complex (0+0i)
+	  - byte represents - uint8 (0)
+	  - rune represents - int32 (0)
+    - String emptystring = ""
+2. Aggregate type (value type):
+   - Struct default value - (0)
+   - Array default value - (0)
+3. Reference type : Default Value - Nil
+   - slice 
+   - map
+   - pointers
+   - channels
+   - functions
+4. Interface type : Default Value - Nil
+   - Empty Interface 
