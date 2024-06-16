@@ -94,17 +94,26 @@ Panic -  a panic is a mechanism that allows you to halt the normal execution of 
 Recover - recover() is a built-in function in Go that is used to regain control of a panicking goroutine.
 
 OOPs in golang : 
+
 1.Constructor - A constructor is a special function is used to initalize and create an instance of a struct type. To declare constructor in golang we use prefix "New" before the struct type.
    Ex. NewEmployee()
+
 2. Polymorphism - ability of a message to be displayed in more than one form. (Same name many forms)
+
 3. Composition - Composition can be achieved in Go is by embedding one struct type into another.
+
 4. Encapsulation is defined as the wrapping up of data under a single unit.
+
 5. Data Abstraction is the property by which only the essential details are displayed to the user. 
 
 First Order Functions : 
+
 1. Anonymous - An anonymous function is a function that was declared without any named identifier to refer to it.
+
 2. User-Defined types - 
+
 3. Higher Order functions - 
+
 4. Closures - Closures are a special case of anonymous functions. Closures are anonymous functions which access the variables defined outside the body of the function.
 
 
@@ -134,6 +143,7 @@ Marshalling: the act of converting a Go data structure into valid JSON.
 Unmarshalling: the act of parsing a valid JSON string into a data structure in Go.
 
 Golang Datatypes list : 
+
 1.Primitive types :
   - Bool (false) 
   - Numeric type
