@@ -126,15 +126,19 @@ json Encoding/Decoding :
 
 - Decoding - json to struct
 
+Marshalling: the act of converting a Go data structure into valid JSON. 
+
+Unmarshalling: the act of parsing a valid JSON string into a data structure in Go.
+
 Golang Datatypes list : 
 1.Primitive types :
   - Bool (false) 
   - Numeric type
     - int default value (0)
-	  - float (0) 
-	  - complex (0+0i)
-	  - byte represents - uint8 (0)
-	  - rune represents - int32 (0)
+    - float (0) 
+    - complex (0+0i)
+    - byte represents - uint8 (0)
+    - rune represents - int32 (0)
     - String emptystring = ""
 2. Aggregate type (value type):
    - Struct default value - (0)
