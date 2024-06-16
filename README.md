@@ -120,6 +120,10 @@ Key features of gRPC include :
 3. Automatic code generation: gRPC generates client and server code based on the service definition specified in the protobuf files.
 4. Bi-directional streaming: It can use unary rpc's where here the client sends a single request and receives a single response.
 
+json Encoding/Decoding :
+Encoding - struct to json
+Decoding - json to struct
+
 Golang Datatypes list : 
 1.Primitive types :
   - Bool (false) 
@@ -140,4 +144,5 @@ Golang Datatypes list :
    - channels
    - functions
 4. Interface type : Default Value - Nil
-   - Empty Interface 
+   - Empty Interface
+
