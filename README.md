@@ -121,8 +121,8 @@ Key features of gRPC include :
 4. Bi-directional streaming: It can use unary rpc's where here the client sends a single request and receives a single response.
 
 json Encoding/Decoding :
-Encoding - struct to json
 
+Encoding - struct to json
 Decoding - json to struct
 
 Golang Datatypes list : 
