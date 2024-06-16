@@ -86,8 +86,11 @@ To create goroutines in golang we use `go` keyword to the prefix of function or 
    for-select loop - We need to stop the for-select loop by using done/quit channel.
 
 Error Handling : 
+
 defer - A defer used to delay the execution of a function/statement until the surrounding function completes. deferred function calls are executed in Last-In-First-Out (LIFO) order.
+
 Panic -  a panic is a mechanism that allows you to halt the normal execution of a program when an unexpected or unrecoverable situation occurs.
+
 Recover - recover() is a built-in function in Go that is used to regain control of a panicking goroutine.
 
 OOPs in golang : 
