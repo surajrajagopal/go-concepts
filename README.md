@@ -95,7 +95,7 @@ Recover - recover() is a built-in function in Go that is used to regain control 
 
 OOPs in golang : 
 
-1.Constructor - A constructor is a special function is used to initalize and create an instance of a struct type. To declare constructor in golang we use prefix "New" before the struct type.
+1. Constructor - A constructor is a special function is used to initalize and create an instance of a struct type. To declare constructor in golang we use prefix "New" before the struct type.
    Ex. NewEmployee()
 
 2. Polymorphism - ability of a message to be displayed in more than one form. (Same name many forms)
