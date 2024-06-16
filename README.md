@@ -122,6 +122,7 @@ Key features of gRPC include :
 
 json Encoding/Decoding :
 Encoding - struct to json
+
 Decoding - json to struct
 
 Golang Datatypes list : 
