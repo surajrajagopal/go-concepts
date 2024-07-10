@@ -18,8 +18,10 @@ Go modules is a way of dealing with dependencies in golang.
 Unlike array, the size of a slice is flexible and can be changed/resized as per requirement. Slice internally represented by a slice header.
 
 Internally a slice is represented by three things : 
-Pointer - Pointer to the underlying array
+Pointer - Pointer to the underlying array.
+
 len - number of elements in the slice.
+
 cap - The capacity of the slice is the number of elements in the underlying array starting from the index from which the slice is created.
 
 Formula Calculate len and cap : 
