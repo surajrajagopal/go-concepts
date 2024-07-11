@@ -25,6 +25,10 @@ len - number of elements in the slice.
 
 cap - The capacity of the slice is the number of elements in the underlying array starting from the index from which the slice is created.
 
+       It indicates the maximum number of elements these structures can hold before they need to allocate more memory.
+
+       The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice to the end of the array.
+       
 Formula Calculate len and cap : 
 
 length of newly created slice = (end–start)
