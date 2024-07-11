@@ -85,9 +85,11 @@ To create goroutines in golang we use `go` keyword to the prefix of function or 
    - for range loop
    - Done/quit channel (bool/struct{})
 4. Wait Group - A wait group is used to wait for collection of goroutions to finish their execution. The control block until all the goroutines completes their execution.
-5. Mutex - A mutex is locking mechanism which ensure only one goroutine can access critical section of code at any point of time. This is done to prevent race condition from happening.
+5. Mutex - A mutex is locking mechanism which ensure only one goroutine can access critical section of code at any point of time. This concepts used to prevent race condition from happening.
 6. Select - The select statement is used to choose a multiple send/receive channel operations.
+
    Select statement block the control until anyone of the operation is ready. If both the operations are ready then it picks randomly.
+   
    for-select loop - We need to stop the for-select loop by using done/quit channel.
 
 Error Handling : 
