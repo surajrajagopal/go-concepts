@@ -59,18 +59,19 @@ Copy function :
    - Both byte and rune data types are essentially integers.
 
    byte data type - represents ASCII characters. (0 to 128)
-   rune data type- represents Unicode characters that are encoded in UTF-8 format. ()
+   
+   Rune data type- represents Unicode characters that are encoded in UTF-8 format. ()
    len - return number of bytes.
    
    For example, a byte variable with value 'a' is converted to the integer 97 while a rune variable with a unicode value '~' is converted to the corresponding unicode codepoint U+007E, where U+ means unicode and the numbers are hexadecimal, which is essentially an integer.
 
-10. Pointers - A pointer is a variable is used to store the address of another variable.
+11. Pointers - A pointer is a variable is used to store the address of another variable.
 
-11. Struct : Struct is a collection of disimilar datatypes. A struct is a user-defined type in golang which is used to group the data into a single unit rather than having seperate values.
+12. Struct : Struct is a collection of disimilar datatypes. A struct is a user-defined type in golang which is used to group the data into a single unit rather than having seperate values.
 Ex. Employee has different fields by using struct we will unit them.
     - Anonymous struct
 
-12. Method - A method is a function which has special receiver type between func keyword and method name. This receiver type may be of struct type or non-struct type. Receiver Type can be of Value receiver or Pointer receiver.
+13. Method - A method is a function which has special receiver type between func keyword and method name. This receiver type may be of struct type or non-struct type. Receiver Type can be of Value receiver or Pointer receiver.
 
 11. Interface - An Interface is a type in go which is a collection of method signature. These 
 collection of method signature are meant to represent certain behaviour. The interface declares only method set and any type implements all the methods of interface is said to be interface type.
