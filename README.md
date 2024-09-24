@@ -58,9 +58,10 @@ Copy function :
    - Byte and rune are alias of uint8 and int32 datatype.
    - Both byte and rune data types are essentially integers.
 
-   byte data type - represents ASCII characters. (0 to 128)
+   Byte data type - represents ASCII characters. (0 to 128)
    
    Rune data type- represents Unicode characters that are encoded in UTF-8 format. ()
+
    len - return number of bytes.
    
    For example, a byte variable with value 'a' is converted to the integer 97 while a rune variable with a unicode value '~' is converted to the corresponding unicode codepoint U+007E, where U+ means unicode and the numbers are hexadecimal, which is essentially an integer.
