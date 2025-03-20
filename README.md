@@ -17,23 +17,23 @@ Go modules is a way of dealing with dependencies in golang.
 6. Slice - A slice is a data type which points to an underlying array and Slices do not own any data on their own. They are just references to existing arrays.
 Unlike array, the size of a slice is flexible and can be changed/resized as per requirement. Slice internally represented by a slice header.
 
-Internally a slice is represented by three things : 
+        Internally a slice is represented by three things : 
 
-Pointer - Pointer to the underlying array.
+        Pointer - Pointer to the underlying array.
 
-len - number of elements in the slice.
+        len - number of elements in the slice.
 
-cap - The capacity of the slice is the number of elements in the underlying array starting from the index from which the slice is created.
+        cap - The capacity of the slice is the number of elements in the underlying array starting from the index from which the slice is created.
       
-      It indicates the maximum number of elements these structures can hold before they need to allocate more memory.
+        It indicates the maximum number of elements these structures can hold before they need to allocate more memory.
       
-      The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice to the end of the array.
+        The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice to the end of the array.
        
-Formula Calculate len and cap : 
+       Formula Calculate len and cap : 
 
-length of newly created slice = (end–start)
+       length of newly created slice = (end–start)
 
-capacity of newly created slice = (length_of_array–start_index)
+       capacity of newly created slice = (length_of_array–start_index)
 
 Append - Slices are dynamic and new elements can be appended to the slice using append function.
 When slice length is greater than capacity - In this case since there is no more capacity, so no new elements can be accommodated.  So in this case under the hood an array of double the capacity will be allocated. The current array pointed by the slice will be copied to that new array. Now the slice will starting pointing to this new array. Hence the capacity will be doubled and length will be increased by 1
