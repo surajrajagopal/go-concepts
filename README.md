@@ -27,7 +27,7 @@ Unlike array, the size of a slice is flexible and can be changed/resized as per 
       
         It indicates the maximum number of elements these structures can hold before they need to allocate more memory.
       
-        The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice to the end of the array.
+        Capacity is calculated from the starting index of the slice to the end of the original array.
        
        Formula Calculate len and cap : 
 
