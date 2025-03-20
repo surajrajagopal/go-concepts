@@ -40,8 +40,8 @@ Unlike array, the size of a slice is flexible and can be changed/resized as per 
      When slice length is greater than capacity - In this case since there is no more capacity, so no new elements can be accommodated.  So in this case under the hood an array double the capacity will be allocated. The 
      current array pointed by the slice will be copied to that new array. Now the slice will starting pointing to this new array. Hence the capacity will be doubled and length will be increased by 1
 
-   Copy function : 
-     - Copy (dst, src)
+Copy function : 
+   - Copy (dst, src)
 
 7. Variadic function is a function that accepts a variable number of arguments.
 - Pass last argument to a function which will accept variable number of arguments(...) ellpsis.
