@@ -35,8 +35,10 @@ Unlike array, the size of a slice is flexible and can be changed/resized as per 
 
        capacity of newly created slice = (length_of_array–start_index)
 
-Append - Slices are dynamic and new elements can be appended to the slice using append function.
-When slice length is greater than capacity - In this case since there is no more capacity, so no new elements can be accommodated.  So in this case under the hood an array double the capacity will be allocated. The current array pointed by the slice will be copied to that new array. Now the slice will starting pointing to this new array. Hence the capacity will be doubled and length will be increased by 1
+
+     Append - Slices are dynamic and new elements can be appended to the slice using append function.
+     When slice length is greater than capacity - In this case since there is no more capacity, so no new elements can be accommodated.  So in this case under the hood an array double the capacity will be allocated. The 
+     current array pointed by the slice will be copied to that new array. Now the slice will starting pointing to this new array. Hence the capacity will be doubled and length will be increased by 1
 
 Copy function : 
   - Copy (dst, src)
