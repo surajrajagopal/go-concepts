@@ -82,23 +82,67 @@ collection of method signature are meant to represent certain behaviour. The int
    - Type Assertion - used to extract the underlying value of the interface. Syntax: t.(type) 
    - Type Switch - A type switch is used to compare the concrete type of an interface against multiple types specified in various case statements. Syntax : t.(Type)
 
-Concurrency : 
+Concurrency In Golang: 
 1. Difference between Concurrency and Parallism
+   - Concurrency is the ability to run multiple tasks in overlapping time periods, but not necessarily at the same time. It enables efficient task management by switching between tasks, making it useful when tasks involve waiting (e.g., I/O operations, network calls).
+     Code : https://go.dev/play/ 
+   - Parallelism, on the other hand, refers to running multiple tasks simultaneously by utilizing multiple CPU cores, allowing for true parallel execution. While concurrency improves responsiveness, parallelism enhances performance by fully utilizing system resources.
+     Code : https://go.dev/play/
 2. Goroutines - A goroutines are like functions or methods that run concurrenctly with other functions and methods. 
 Goroutines are lighweighted threads. 
 The creation of goroutines are tiny/cheaper as compare to threads. 
-To create goroutines in golang we use `go` keyword to the prefix of function or methods. 
+To create goroutines in golang we use `go` keyword to the prefix of function or methods.
+Goroutines are lightweight, managed by the Go runtime,
+and consume much less memory compared to traditional OS threads. Unlike threads, which are scheduled by the OS, goroutines are scheduled by Go’s runtime scheduler, making them more efficient.
+Go’s scheduler follows the GPM model, where:
+
+G (Goroutine) represents the lightweight execution unit.
+M (Machine) represents an OS thread.
+P (Processor) is a logical processor that schedules goroutines on threads.
+The scheduler assigns goroutines to P, which then runs them on M. If a goroutine blocks (like waiting for I/O), the scheduler moves another goroutine to that thread to keep execution efficient.
+
 3. Channels - Channels can be thought as a pipes by using which goroutines communications.
    - close() 
    - for range loop
    - Done/quit channel (bool/struct{})
+   Channels in Go are used for communication between goroutines. They allow safe data transfer without explicit locking mechanisms.
+   There are two types of channels:
+      Unbuffered Channels – These don’t have a capacity. A sender must wait until a receiver reads the data. This ensures synchronization between goroutines.
+      Buffered Channels – These have a specified capacity. A sender can send data without waiting, up to the buffer limit. Once full, the sender must wait for the receiver to read data before sending more.
+   Difference between closing a channel and making a channel nil in Go
+      Closing a Channel :
+         - A channel is closed using close(channel).
+         - Once closed, no more values can be sent to it, but it can still be read until it's empty.
+         - Trying to send data to a closed channel causes a panic.
+         - Receivers get a zero value when reading from a closed channel.
+     Making a Channel Nil :
+         - Setting a channel to nil means it has no memory allocated.
+         - Sending or receiving on a nil channel blocks forever (deadlock).
+         - This is useful to disable a channel dynamically.
+
 4. Wait Group - A wait group is used to wait for collection of goroutions to finish their execution. The control block until all the goroutines completes their execution.
 5. Mutex - A mutex is locking mechanism which ensure only one goroutine can access critical section of code at any point of time. This concepts used to prevent race condition from happening.
+   How does Go handle goroutine synchronization to avoid race conditions?
+    - Yes! Mutex (mutual exclusion) is one way to handle synchronization in Go. It ensures that only one goroutine can access a shared resource at a time. Go provides sync.Mutex for this purpose.
+   Can you explain the difference between sync.Mutex and sync.RWMutex? When would you use RWMutex instead of Mutex?
+    - sync.Mutex: This is a standard mutex that allows only one goroutine to access a resource at a time. If one goroutine locks it, all other goroutines must wait.
+    - sync.RWMutex: This is a read-write mutex. It allows multiple goroutines to read a resource at the same time, but only one goroutine can write. If a goroutine acquires a write lock, all other reads and writes are blocked.
+   When to use RWMutex?
+    - Use sync.RWMutex when you have more reads than writes, so multiple goroutines can read concurrently without blocking each other. This improves performance.
+   Note : RLock allows multiple readers at the same time, improving performance when there are more reads than writes.
+
 6. Select - The select statement is used to choose a multiple send/receive channel operations.
 
    Select statement block the control until anyone of the operation is ready. If both the operations are ready then it picks randomly.
    
    for-select loop - We need to stop the for-select loop by using done/quit channel.
+
+   The select statement in Go is used to wait on multiple channel operations and executes the first one that is ready. It helps handle multiple channels efficiently.
+
+   Key Points About select:
+     - If multiple channels are ready, one case is chosen randomly.
+     - If no channels are ready, it blocks execution until one becomes available.
+     - You can use a default case to prevent blocking.
 
 Error Handling : 
 
@@ -176,7 +220,20 @@ Golang Datatypes list :
    - map
    - pointers
    - channels
-   - functions
-4. Interface type : Default Value - Nil
-   - Empty Interface
+What is the difference between a normal function and a goroutine in Golang?
+Key Differences Between Normal Functions and Goroutines in Golang:
+Execution Style:
+
+Normal functions execute synchronously in the same thread.
+Goroutines execute asynchronously, allowing multiple tasks to run concurrently.
+Thread Management:
+
+  A normal function runs on the main thread.
+  A goroutine runs on a separate lightweight thread managed by Go’s scheduler.
+
+Performance:
+
+Normal functions block execution until they finish.
+Goroutines are non-blocking, so thousands can run efficiently without heavy memory usage.
+
 
