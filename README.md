@@ -106,14 +106,14 @@ Concurrency In Golang:
 Goroutines are lighweighted threads. 
 The creation of goroutines are tiny/cheaper as compare to threads. 
 To create goroutines in golang we use `go` keyword to the prefix of function or methods.
-Goroutines are lightweight, managed by the Go runtime,
-and consume much less memory compared to traditional OS threads. Unlike threads, which are scheduled by the OS, goroutines are scheduled by Go’s runtime scheduler, making them more efficient.
-Go’s scheduler follows the GPM model, where:
+   Goroutines are lightweight, managed by the Go runtime,
+   and consume much less memory compared to traditional OS threads. Unlike threads, which are scheduled by the OS, goroutines are scheduled by Go’s runtime scheduler, making them more efficient.
+   Go’s scheduler follows the GPM model, where:
 
-G (Goroutine) represents the lightweight execution unit.
-M (Machine) represents an OS thread.
-P (Processor) is a logical processor that schedules goroutines on threads.
-The scheduler assigns goroutines to P, which then runs them on M. If a goroutine blocks (like waiting for I/O), the scheduler moves another goroutine to that thread to keep execution efficient.
+     G (Goroutine) represents the lightweight execution unit.
+     M (Machine) represents an OS thread.
+     P (Processor) is a logical processor that schedules goroutines on threads.
+     The scheduler assigns goroutines to P, which then runs them on M. If a goroutine blocks (like waiting for I/O), the scheduler moves another goroutine to that thread to keep execution efficient.
 
 3. Channels - Channels can be thought as a pipes by using which goroutines communications.
    - close() 
