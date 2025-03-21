@@ -120,9 +120,11 @@ To create goroutines in golang we use `go` keyword to the prefix of function or 
    - for range loop
    - Done/quit channel (bool/struct{})
    Channels in Go are used for communication between goroutines. They allow safe data transfer without explicit locking mechanisms.
+   
    There are two types of channels:
       Unbuffered Channels – These don’t have a capacity. A sender must wait until a receiver reads the data. This ensures synchronization between goroutines.
       Buffered Channels – These have a specified capacity. A sender can send data without waiting, up to the buffer limit. Once full, the sender must wait for the receiver to read data before sending more.
+
    Difference between closing a channel and making a channel nil in Go
       Closing a Channel :
          - A channel is closed using close(channel).
@@ -134,8 +136,8 @@ To create goroutines in golang we use `go` keyword to the prefix of function or 
          - Sending or receiving on a nil channel blocks forever (deadlock).
          - This is useful to disable a channel dynamically.
 
-4. Wait Group - A wait group is used to wait for collection of goroutions to finish their execution. The control block until all the goroutines completes their execution.
-5. Mutex - A mutex is locking mechanism which ensure only one goroutine can access critical section of code at any point of time. This concepts used to prevent race condition from happening.
+5. Wait Group - A wait group is used to wait for collection of goroutions to finish their execution. The control block until all the goroutines completes their execution.
+6. Mutex - A mutex is locking mechanism which ensure only one goroutine can access critical section of code at any point of time. This concepts used to prevent race condition from happening.
    How does Go handle goroutine synchronization to avoid race conditions?
     - Yes! Mutex (mutual exclusion) is one way to handle synchronization in Go. It ensures that only one goroutine can access a shared resource at a time. Go provides sync.Mutex for this purpose.
    Can you explain the difference between sync.Mutex and sync.RWMutex? When would you use RWMutex instead of Mutex?
@@ -145,7 +147,7 @@ To create goroutines in golang we use `go` keyword to the prefix of function or 
     - Use sync.RWMutex when you have more reads than writes, so multiple goroutines can read concurrently without blocking each other. This improves performance.
    Note : RLock allows multiple readers at the same time, improving performance when there are more reads than writes.
 
-6. Select - The select statement is used to choose a multiple send/receive channel operations.
+7. Select - The select statement is used to choose a multiple send/receive channel operations.
 
    Select statement block the control until anyone of the operation is ready. If both the operations are ready then it picks randomly.
    
