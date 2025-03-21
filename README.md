@@ -128,12 +128,14 @@ To create goroutines in golang we use `go` keyword to the prefix of function or 
       Buffered Channels – These have a specified capacity. A sender can send data without waiting, up to the buffer limit. Once full, the sender must wait for the receiver to read data before sending more.
 
    Difference between closing a channel and making a channel nil in Go
+
       Closing a Channel :
          - A channel is closed using close(channel).
          - Once closed, no more values can be sent to it, but it can still be read until it's empty.
          - Trying to send data to a closed channel causes a panic.
          - Receivers get a zero value when reading from a closed channel.
-     Making a Channel Nil :
+
+      Making a Channel Nil :
          - Setting a channel to nil means it has no memory allocated.
          - Sending or receiving on a nil channel blocks forever (deadlock).
          - This is useful to disable a channel dynamically.
