@@ -83,19 +83,25 @@ collection of method signature are meant to represent certain behaviour. The int
    - Type Switch - A type switch is used to compare the concrete type of an interface against multiple types specified in various case statements. Syntax : t.(Type)
 
 Concurrency In Golang: 
+
 1. Difference between Concurrency and Parallism
    - Concurrency is the ability to run multiple tasks in overlapping time periods, but not necessarily at the same time. It enables efficient task management by switching between tasks, making it useful when tasks involve waiting (e.g., I/O operations, network calls).
      Code : [https://go.dev/play/](https://go.dev/play/p/KLyqTzmCFiU)
 
-    How it works:
+      How it works:
+
       Tasks run concurrently (overlapping), but not necessarily in parallel.
+
       The Go scheduler switches between goroutines while waiting.
    - Parallelism, on the other hand, refers to running multiple tasks simultaneously by utilizing multiple CPU cores, allowing for true parallel execution. While concurrency improves responsiveness, parallelism enhances performance by fully utilizing system resources.
      Code : [https://go.dev/play/](https://go.dev/play/p/AFuB1-XcqMg)
 
      How it works:
+
       runtime.GOMAXPROCS(2) enables parallel execution on 2 CPU cores.
+
       Tasks run truly simultaneously if multiple CPU cores are available.
+     
 2. Goroutines - A goroutines are like functions or methods that run concurrenctly with other functions and methods. 
 Goroutines are lighweighted threads. 
 The creation of goroutines are tiny/cheaper as compare to threads. 
