@@ -15,7 +15,7 @@ Go modules is a way of dealing with dependencies in golang.
 5. Array - An array is a collection of elements of the same type. It is an ordered sequence of elements stored contiguously in memory.
 
 6. Slice - A slice is a data type which points to an underlying array and Slices do not own any data on their own. They are just references to existing arrays.
-Unlike array, the size of a slice is flexible and can be changed/resized as per requirement. Slice internally represented by a slice header.
+           Unlike array, the size of a slice is flexible and can be changed/resized as per requirement. Slice internally represented by a slice header.
 
         Internally a slice is represented by three things : 
 
