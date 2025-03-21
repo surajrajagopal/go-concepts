@@ -122,7 +122,9 @@ To create goroutines in golang we use `go` keyword to the prefix of function or 
    Channels in Go are used for communication between goroutines. They allow safe data transfer without explicit locking mechanisms.
    
    There are two types of channels:
+
       Unbuffered Channels – These don’t have a capacity. A sender must wait until a receiver reads the data. This ensures synchronization between goroutines.
+
       Buffered Channels – These have a specified capacity. A sender can send data without waiting, up to the buffer limit. Once full, the sender must wait for the receiver to read data before sending more.
 
    Difference between closing a channel and making a channel nil in Go
