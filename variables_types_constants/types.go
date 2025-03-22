@@ -10,7 +10,7 @@ func Types() {
 
 	var a1 = true
 	var b1 = false
-	fmt.Println(a1 && b1) //anyone of condition has to true
+	fmt.Println(a1 || b1) //anyone of condition has to true
 
 	//int - signed and unsigned types
 	var num int = 10
