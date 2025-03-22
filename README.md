@@ -12,9 +12,11 @@ Definition of all the concept :
 4. Packages - Packages are used to organize Go source code for better reusability and readability. Packages are a collection of Go sources files that reside in the same directory. hence it is easy to maintain go projects.
 Go modules is a way of dealing with dependencies in golang.
 
-5. Array - An array is a collection of elements of the same type. It is an ordered sequence of elements stored contiguously in memory.
+A Go Module is nothing but a collection of Go packages. Now this question might come to your mind. Why do we need Go modules to create a custom package? The answer is the import path for the custom package we create is derived from the name of the go module. In addition to this, all the other third-party packages(such as source code from github) along with their versions which our application uses will be managed by the go.mod file. This go.mod file is created when we create a new module.
 
-6. Slice - A slice is a data type which points to an underlying array and Slices do not own any data on their own. They are just references to existing arrays.
+6. Array - An array is a collection of elements of the same type. It is an ordered sequence of elements stored contiguously in memory.
+
+7. Slice - A slice is a data type which points to an underlying array and Slices do not own any data on their own. They are just references to existing arrays.
            Unlike array, the size of a slice is flexible and can be changed/resized as per requirement. Slice internally represented by a slice header.
 
         Internally a slice is represented by three things : 
