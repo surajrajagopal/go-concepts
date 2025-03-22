@@ -31,7 +31,9 @@ Go modules is a way of dealing with dependencies in golang.
         It indicates the maximum number of elements these structures can hold before they need to allocate more memory.
       
         Capacity is calculated from the starting index of the slice to the end of the original array.
-       
+
+        When capacity is exceeded, Go doubles the capacity automatically for performance reasons.
+   
        Formula Calculate len and cap : 
 
        length of newly created slice = (end–start)
