@@ -46,6 +46,7 @@ Definition of all the concept :
      Append : In Go, slices are dynamic, meaning we can add new elements using the append() function.
 
      If there is extra capacity, the new element is added without changing the underlying array.
+   
      If the slice length exceeds capacity, Go creates a new array with double the capacity, copies the existing elements to the new array, and updates the slice to point to the new array.
 
 Copy function : 
