@@ -20,8 +20,8 @@ Definition of all the concept :
    
    Go modules is a way of dealing with dependencies in golang.
 
-   A Go Module is nothing but a collection of Go packages. Now this question might come to your mind. Why do we need Go modules to create a custom package? The answer is the import path for the custom package we create is derived from the name of the go module. In 
-   addition to this, all the other third-party packages(such as source code from github) along with their versions which our application uses will be managed by the go.mod file. This go.mod file is created when we create a new module.
+   A Go Module is nothing but a collection of Go packages. Now this question might come to your mind. Why do we need Go modules to create a custom package? The import path of a custom package in Go is based on the module name. The go.mod file also manages all third- 
+   party dependencies (like GitHub packages) and their versions for the application. This go.mod file is created when we create a new module.
 
 8. Array - An array is a collection of elements of the same type. It is an ordered sequence of elements stored contiguously in memory.
 
