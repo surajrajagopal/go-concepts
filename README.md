@@ -12,7 +12,7 @@ Definition of all the concept :
 4. Function - A function is a block of code is used to perform specific task. At a high level, a function takes an input and returns an output. Function allows you to extract common peice of code into a single component.
 
      Named return values :
-     It is possible to return named values from a function. If a return value is named, it can be considered as being declared as a variable in the first line of the function.
+     It is possible to return named values from a function. If a return value is named, declared as a variable in the first line of the function.
 
      _ is known as the blank identifier in Go. It can be used in place of any value of any type.
 
