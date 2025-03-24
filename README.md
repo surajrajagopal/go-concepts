@@ -23,7 +23,7 @@ Definition of all the concept :
    A Go Module is nothing but a collection of Go packages. Now this question might come to your mind. Why do we need Go modules to create a custom package? The import path of a custom package in Go is based on the module name. The go.mod file also manages all third- 
    party dependencies (like GitHub packages) and their versions for the application. This go.mod file is created when we create a new module.
 
-8. Array - An array is a collection of elements of the same type. It is an ordered sequence of elements stored contiguously in memory.
+8. Array - An array is a fixed-size collection of elements of the same type, stored in a continuous block of memory in a specific order..
 
 9. Slice - A slice is a data type which points to an underlying array and Slices do not own any data on their own. They are just references to existing arrays.
            Unlike array, the size of a slice is flexible and can be changed/resized as per requirement. Slice internally represented by a slice header.
