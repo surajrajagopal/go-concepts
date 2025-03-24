@@ -6,10 +6,11 @@ Definition of all the concept :
 1. Variables - Variable is the name given to a memory location to store a value of a specific type.
 
 2. Constant - The term constant is used for fixed values.
+   Note : we cannot update constant value and we cannot assign runtime value to constant variable.
 
-3. Function - A function is a block of code is used to perform specific task. At a high level, a function takes an input and returns an output. Function allows you to extract common peice of code into a single component.
+4. Function - A function is a block of code is used to perform specific task. At a high level, a function takes an input and returns an output. Function allows you to extract common peice of code into a single component.
 
-4. Packages - Packages are used to organize Go source code for better reusability and readability. Packages are a collection of Go sources files that reside in the same directory. hence it is easy to maintain go projects.
+5. Packages - Packages are used to organize Go source code for better reusability and readability. Packages are a collection of Go sources files that reside in the same directory. hence it is easy to maintain go projects.
 Go modules is a way of dealing with dependencies in golang.
 
    A Go Module is nothing but a collection of Go packages. Now this question might come to your mind. Why do we need Go modules to create a custom package? The answer is the import path for the custom package we create is derived from the name of the go module. In 
