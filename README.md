@@ -260,6 +260,7 @@ Golang Datatypes list :
    - map
    - pointers
    - channels
+
 What is the difference between a normal function and a goroutine in Golang?
 Key Differences Between Normal Functions and Goroutines in Golang:
 Execution Style:
