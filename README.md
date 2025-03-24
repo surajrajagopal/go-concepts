@@ -11,15 +11,21 @@ Definition of all the concept :
 
 4. Function - A function is a block of code is used to perform specific task. At a high level, a function takes an input and returns an output. Function allows you to extract common peice of code into a single component.
 
-5. Packages - Packages are used to organize Go source code for better reusability and readability. Packages are a collection of Go sources files that reside in the same directory. hence it is easy to maintain go projects.
+  Named return values :
+  It is possible to return named values from a function. If a return value is named, it can be considered as being declared as a variable in the first line of the function.
+
+  _ is known as the blank identifier in Go. It can be used in place of any value of any type.
+
+6. Packages - Packages are used to organize Go source code for better reusability and readability. Packages are a collection of Go sources files that reside in the same directory. hence it is easy to maintain go projects.
+   
 Go modules is a way of dealing with dependencies in golang.
 
    A Go Module is nothing but a collection of Go packages. Now this question might come to your mind. Why do we need Go modules to create a custom package? The answer is the import path for the custom package we create is derived from the name of the go module. In 
    addition to this, all the other third-party packages(such as source code from github) along with their versions which our application uses will be managed by the go.mod file. This go.mod file is created when we create a new module.
 
-6. Array - An array is a collection of elements of the same type. It is an ordered sequence of elements stored contiguously in memory.
+8. Array - An array is a collection of elements of the same type. It is an ordered sequence of elements stored contiguously in memory.
 
-7. Slice - A slice is a data type which points to an underlying array and Slices do not own any data on their own. They are just references to existing arrays.
+9. Slice - A slice is a data type which points to an underlying array and Slices do not own any data on their own. They are just references to existing arrays.
            Unlike array, the size of a slice is flexible and can be changed/resized as per requirement. Slice internally represented by a slice header.
 
         Internally a slice is represented by three things : 
