@@ -25,25 +25,20 @@ Definition of all the concept :
 
 8. Array - An array is a collection of similar datatype with fixed-size, stored in a continuous memory block in a specific order..
 
-9. Slice - A slice in Go is a flexible and resizable view of an underlying array. It doesn’t store data itself but acts as a reference to an existing array. Unlike arrays, slices can grow or shrink as needed. Internally, they are managed using a slice header that keeps            track of the length, capacity, and reference to the array..
+9. Slice - A slice in Go is a flexible, dynamic view of an underlying array. Unlike arrays, slices don’t own data but act as references to an array. The size of a slice can grow or shrink as needed. Internally, a slice is managed using a slice header that stores:
+         Internally a slice is represented by three things : 
 
-        Internally a slice is represented by three things : 
-
-        Pointer - Pointer to the underlying array.
-
-        len - number of elements in the slice.
-
-        cap - The capacity of the slice is the number of elements in the underlying array starting from the index from which the slice is created.
-      
-        Capacity is calculated from the starting index of the slice to the end of the original array.
-
-        When capacity is exceeded, Go doubles the capacity automatically for performance reasons.
+         Pointer → Points to the starting element of the underlying array.
+         Length (len) → Number of elements in the slice.
+         Capacity (cap) → Maximum elements the slice can hold before reallocation.
+         Capacity is calculated from the starting index of the slice to the end of the original array.
+         When capacity is exceeded, Go doubles the capacity automatically for performance reasons.
    
-       Formula Calculate len and cap : 
+         Formula Calculate len and cap : 
 
-       length of newly created slice = (end–start)
+         length of newly created slice = (end–start)
 
-       capacity of newly created slice = (length_of_array–start_index)
+         capacity of newly created slice = (length_of_array–start_index)
 
 
      Append - Slices are dynamic and new elements can be appended to the slice using append function.
