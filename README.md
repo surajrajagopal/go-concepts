@@ -26,6 +26,7 @@ Definition of all the concept :
 8. Array - An array is a collection of similar datatype with fixed-size, stored in a continuous memory block in a specific order..
 
 9. Slice - A slice in Go is a flexible, dynamic view of an underlying array. Unlike arrays, slices don’t own data but act as references to an array. The size of a slice can grow or shrink as needed. Internally, a slice is managed using a slice header that stores:
+
          Internally a slice is represented by three things : 
 
          Pointer → Points to the starting element of the underlying array.
