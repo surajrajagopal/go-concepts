@@ -52,7 +52,9 @@ Definition of all the concept :
      make : make() function in Go is used to create slices, maps, and channels with pre-allocated memory. Unlike new(), which only allocates memory, make() also initializes the object and returns a ready-to-use value.
 
      make(type, length, capacity) // For slices
+   
      make(map[keyType]valueType)  // For maps
+   
      make(chan dataType, buffer)  // For channels
 
      Note : Memory is allocated, but elements are initialized with zero values (0 for int).
