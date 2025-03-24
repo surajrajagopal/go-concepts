@@ -6,6 +6,7 @@ Definition of all the concept :
 1. Variables - Variable is the name given to a memory location to store a value of a specific type.
 
 2. Constant - The term constant is used for fixed values.
+
    Note : we cannot update constant value and we cannot assign runtime value to constant variable.
 
 4. Function - A function is a block of code is used to perform specific task. At a high level, a function takes an input and returns an output. Function allows you to extract common peice of code into a single component.
