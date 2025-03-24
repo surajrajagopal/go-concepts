@@ -49,7 +49,7 @@ Definition of all the concept :
    
      If the slice length exceeds capacity, Go creates a new array with double the capacity, copies the existing elements to the new array, and updates the slice to point to the new array.
 
-     make() function in Go is used to create slices, maps, and channels with pre-allocated memory. Unlike new(), which only allocates memory, make() also initializes the object and returns a ready-to-use value.
+     make : make() function in Go is used to create slices, maps, and channels with pre-allocated memory. Unlike new(), which only allocates memory, make() also initializes the object and returns a ready-to-use value.
 
      make(type, length, capacity) // For slices
      make(map[keyType]valueType)  // For maps
