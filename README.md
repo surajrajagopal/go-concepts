@@ -59,7 +59,8 @@ Definition of all the concept :
 
      Note : Memory is allocated, but elements are initialized with zero values (0 for int).
    
-     Copy function : 
+     Copy function :
+      The copy() function in Go is used to copy elements from one slice (src) to another (dst). It returns the number of elements copied, which is the minimum length of the two slices. 
       - Copy (dst, src)
 
 7. Variadic function is a function that accepts a variable number of arguments.
