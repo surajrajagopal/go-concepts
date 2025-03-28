@@ -113,7 +113,10 @@ Ex. Employee has different fields by using struct we will unit them.
 
       ✅ Incorrect type assertion returns false instead of crashing the program
      
-   - Type Switch - A type switch in Go is used to determine the actual type of a value stored in an interface. It allows you to check and handle multiple possible types in different case statements. The syntax t.(type) helps in identifying the concrete type at runtime, making it useful for handling different data types dynamically.
+   - Type Switch :
+        A type switch in Go is used to determine the actual type of a value stored in an interface.
+        It allows you to check and handle multiple possible types in different case statements.
+        The syntax t.(type) helps in identifying the concrete type at runtime, making it useful for handling different data types dynamically.
 
 Concurrency In Golang: 
 
