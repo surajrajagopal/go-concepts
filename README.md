@@ -104,7 +104,7 @@ Ex. Employee has different fields by using struct we will unit them.
     
    - Empty interface - An interface that has zero methods is called an empty interface. It is represented as interface{}.
      
-   - Type Assertion - used to extract the Extracts value of the interface. Syntax: t.(type)
+   - Type Assertion - used to extract the underlying value of the interface. Syntax: t.(type)
      Key Points :
 
       ✅ Extracts the actual value from an interface
