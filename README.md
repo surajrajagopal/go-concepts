@@ -97,8 +97,15 @@ Ex. Employee has different fields by using struct we will unit them.
 13. Method - A method is a function which has special receiver type between func keyword and method name. This receiver type may be of struct type or non-struct type. Receiver Type can be of Value receiver or Pointer receiver.
 
 11. Interface - An interface in Go is a type that defines a set of method signatures but doesn’t provide their implementation. It represents a specific behavior, and any type that implements all the methods of an interface is considered to satisfy that interface. This allows for flexible and reusable code by enabling polymorphism.
-   - Empty interface - An interface that has zero methods is called an empty interface. It is represented as interface{}. 
-   - Type Assertion - used to extract the underlying value of the interface. Syntax: t.(type) 
+    
+   - Empty interface - An interface that has zero methods is called an empty interface. It is represented as interface{}.
+     
+   - Type Assertion - used to extract the Extracts value of the interface. Syntax: t.(type)
+     Key Points
+      ✅ Extracts the actual value from an interface
+      ✅ Safe type assertion using ok to avoid runtime panics
+      ✅ Incorrect type assertion returns false instead of crashing the program
+     
    - Type Switch - A type switch in Go is used to determine the actual type of a value stored in an interface. It allows you to check and handle multiple possible types in different case statements. The syntax t.(type) helps in identifying the concrete type at runtime, making it useful for handling different data types dynamically.
 
 Concurrency In Golang: 
@@ -122,19 +129,23 @@ Concurrency In Golang:
       Tasks run truly simultaneously if multiple CPU cores are available.
      
 2. Goroutines - A goroutines are like functions or methods that run concurrenctly with other functions and methods. 
-Goroutines are lighweighted threads. 
-The creation of goroutines are tiny/cheaper as compare to threads. 
-To create goroutines in golang we use `go` keyword to the prefix of function or methods.
-   Goroutines are lightweight, managed by the Go runtime,
-   and consume much less memory compared to traditional OS threads. Unlike threads, which are scheduled by the OS, goroutines are scheduled by Go’s runtime scheduler, making them more efficient.
-   Go’s scheduler follows the GPM model, where:
+
+- Goroutines are lighweighted threads.
+
+- The creation of goroutines are tiny/cheaper as compare to threads.
+   
+- To create goroutines in golang we use `go` keyword to the prefix of function or methods.
+  
+- Goroutines are lightweight, managed by the Go runtime, and consume much less memory compared to traditional OS threads. Unlike threads, which are scheduled by the OS, goroutines are scheduled by Go’s runtime scheduler, making them more efficient.
+  
+  Go’s scheduler follows the GPM model, where:
 
      G (Goroutine) represents the lightweight execution unit.
      M (Machine) represents an OS thread.
      P (Processor) is a logical processor that schedules goroutines on threads.
      The scheduler assigns goroutines to P, which then runs them on M. If a goroutine blocks (like waiting for I/O), the scheduler moves another goroutine to that thread to keep execution efficient.
 
-3. Channels - Channels can be thought as a pipes by using which goroutines communications.
+4. Channels - Channels can be thought as a pipes by using which goroutines communications.
    - close() 
    - for range loop
    - Done/quit channel (bool/struct{})
@@ -160,7 +171,8 @@ To create goroutines in golang we use `go` keyword to the prefix of function or 
          - This is useful to disable a channel dynamically.
 
 5. Wait Group - A wait group is used to wait for collection of goroutions to finish their execution. The control block until all the goroutines completes their execution.
-6. Mutex - A mutex is locking mechanism which ensure only one goroutine can access critical section of code at any point of time. This concepts used to prevent race condition from happening.
+   
+7. Mutex - A mutex is locking mechanism which ensure only one goroutine can access critical section of code at any point of time. This concepts used to prevent race condition from happening.
    How does Go handle goroutine synchronization to avoid race conditions?
     - Yes! Mutex (mutual exclusion) is one way to handle synchronization in Go. It ensures that only one goroutine can access a shared resource at a time. Go provides sync.Mutex for this purpose.
    Can you explain the difference between sync.Mutex and sync.RWMutex? When would you use RWMutex instead of Mutex?
@@ -170,7 +182,7 @@ To create goroutines in golang we use `go` keyword to the prefix of function or 
     - Use sync.RWMutex when you have more reads than writes, so multiple goroutines can read concurrently without blocking each other. This improves performance.
    Note : RLock allows multiple readers at the same time, improving performance when there are more reads than writes.
 
-7. Select - The select statement is used to choose a multiple send/receive channel operations.
+8. Select - The select statement is used to choose a multiple send/receive channel operations.
 
    Select statement block the control until anyone of the operation is ready. If both the operations are ready then it picks randomly.
    
