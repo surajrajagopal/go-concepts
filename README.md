@@ -148,14 +148,20 @@ Concurrency In Golang:
   Go’s scheduler follows the GPM model, where:
 
      G (Goroutine) represents the lightweight execution unit.
+
      M (Machine) represents an OS thread.
+
      P (Processor) is a logical processor that schedules goroutines on threads.
+
      The scheduler assigns goroutines to P, which then runs them on M. If a goroutine blocks (like waiting for I/O), the scheduler moves another goroutine to that thread to keep execution efficient.
 
 4. Channels - Channels can be thought as a pipes by using which goroutines communications.
-   - close() 
+   - close()
+     
    - for range loop
+     
    - Done/quit channel (bool/struct{})
+     
    Channels in Go are used for communication between goroutines. They allow safe data transfer without explicit locking mechanisms.
    
    There are two types of channels:
@@ -182,9 +188,11 @@ Concurrency In Golang:
 7. Mutex - A mutex is locking mechanism which ensure only one goroutine can access critical section of code at any point of time. This concepts used to prevent race condition from happening.
    How does Go handle goroutine synchronization to avoid race conditions?
     - Yes! Mutex (mutual exclusion) is one way to handle synchronization in Go. It ensures that only one goroutine can access a shared resource at a time. Go provides sync.Mutex for this purpose.
+      
    Can you explain the difference between sync.Mutex and sync.RWMutex? When would you use RWMutex instead of Mutex?
     - sync.Mutex: This is a standard mutex that allows only one goroutine to access a resource at a time. If one goroutine locks it, all other goroutines must wait.
     - sync.RWMutex: This is a read-write mutex. It allows multiple goroutines to read a resource at the same time, but only one goroutine can write. If a goroutine acquires a write lock, all other reads and writes are blocked.
+   
    When to use RWMutex?
     - Use sync.RWMutex when you have more reads than writes, so multiple goroutines can read concurrently without blocking each other. This improves performance.
    Note : RLock allows multiple readers at the same time, improving performance when there are more reads than writes.
