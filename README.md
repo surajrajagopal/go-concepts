@@ -30,9 +30,13 @@ Definition of all the concept :
          Internally a slice is represented by three things : 
 
          Pointer → Points to the starting element of the underlying array.
+   
          Length (len) → Number of elements in the slice.
+
          Capacity (cap) → Maximum elements the slice can hold before reallocation.
+
          Capacity is calculated from the starting index of the slice to the end of the original array.
+
          When capacity is exceeded, Go doubles the capacity automatically for performance reasons.
    
          Formula Calculate len and cap : 
