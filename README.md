@@ -96,11 +96,10 @@ Ex. Employee has different fields by using struct we will unit them.
 
 13. Method - A method is a function which has special receiver type between func keyword and method name. This receiver type may be of struct type or non-struct type. Receiver Type can be of Value receiver or Pointer receiver.
 
-11. Interface - An Interface is a type in go which is a collection of method signature. These 
-collection of method signature are meant to represent certain behaviour. The interface declares only method set and any type implements all the methods of interface is said to be interface type.
+11. Interface - An interface in Go is a type that defines a set of method signatures but doesn’t provide their implementation. It represents a specific behavior, and any type that implements all the methods of an interface is considered to satisfy that interface. This allows for flexible and reusable code by enabling polymorphism.
    - Empty interface - An interface that has zero methods is called an empty interface. It is represented as interface{}. 
    - Type Assertion - used to extract the underlying value of the interface. Syntax: t.(type) 
-   - Type Switch - A type switch is used to compare the concrete type of an interface against multiple types specified in various case statements. Syntax : t.(Type)
+   - Type Switch - A type switch in Go is used to determine the actual type of a value stored in an interface. It allows you to check and handle multiple possible types in different case statements. The syntax t.(type) helps in identifying the concrete type at runtime, making it useful for handling different data types dynamically.
 
 Concurrency In Golang: 
 
