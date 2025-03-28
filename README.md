@@ -101,9 +101,12 @@ Ex. Employee has different fields by using struct we will unit them.
    - Empty interface - An interface that has zero methods is called an empty interface. It is represented as interface{}.
      
    - Type Assertion - used to extract the Extracts value of the interface. Syntax: t.(type)
-     Key Points
+     Key Points :
+
       ✅ Extracts the actual value from an interface
+     
       ✅ Safe type assertion using ok to avoid runtime panics
+
       ✅ Incorrect type assertion returns false instead of crashing the program
      
    - Type Switch - A type switch in Go is used to determine the actual type of a value stored in an interface. It allows you to check and handle multiple possible types in different case statements. The syntax t.(type) helps in identifying the concrete type at runtime, making it useful for handling different data types dynamically.
