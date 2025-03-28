@@ -119,6 +119,13 @@ Concurrency In Golang:
 
 1. Difference between Concurrency and Parallism
    - Concurrency is the ability to run multiple tasks in overlapping time periods, but not necessarily at the same time. It enables efficient task management by switching between tasks, making it useful when tasks involve waiting (e.g., I/O operations, network calls).
+
+     Single Core Processors : 
+
+     In Go, goroutines are lightweight threads used for concurrent execution. However, on a single-core processor, they do not run truly in parallel.
+
+     Instead, the Go scheduler rapidly switches between goroutines, giving the illusion of concurrency. This is known as time-sharing, where each goroutine gets a small time slice to execute before switching to the next.
+     
      Code : [https://go.dev/play/](https://go.dev/play/p/KLyqTzmCFiU)
 
       How it works:
@@ -126,6 +133,7 @@ Concurrency In Golang:
       Tasks run concurrently (overlapping), but not necessarily in parallel.
 
       The Go scheduler switches between goroutines while waiting.
+     
    - Parallelism, on the other hand, refers to running multiple tasks simultaneously by utilizing multiple CPU cores, allowing for true parallel execution. While concurrency improves responsiveness, parallelism enhances performance by fully utilizing system resources.
      Code : [https://go.dev/play/](https://go.dev/play/p/AFuB1-XcqMg)
 
