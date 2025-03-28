@@ -90,7 +90,7 @@ Definition of all the concept :
 
 11. Pointers - A pointer is a variable is used to store the address of another variable.
 
-12. Struct : Struct is a collection of disimilar datatypes. A struct is a user-defined type in golang which is used to group the data into a single unit rather than having seperate values.
+12. Struct : Struct is a collection of disimilar datatypes. A struct is a user-defined type in golang which is used to group the data into a single unit.
 Ex. Employee has different fields by using struct we will unit them.
     - Anonymous struct
 
