@@ -342,4 +342,44 @@ Performance:
 Normal functions block execution until they finish.
 Goroutines are non-blocking, so thousands can run efficiently without heavy memory usage.
 
+Microservices Overview for Interviews :
+
+A microservice architecture is a design pattern that structures an application as a collection of loosely coupled, independently deployable services. Each service is responsible for a specific business function and communicates with other services through APIs, usually over HTTP or messaging protocols like Kafka or RabbitMQ.
+
+Key Characteristics of Microservices:
+
+Independent Deployability: Each microservice can be deployed, upgraded, and scaled independently.
+
+Loosely Coupled: Each microservice is self-contained and focuses on a specific business function.
+
+Technology Agnostic: Different microservices can be written in different programming languages or use different data stores.
+
+Resilience: Each microservice is isolated from failure, meaning a failure in one service doesn’t impact others.
+
+Scalability: Individual services can be scaled independently based on demand.
+
+Communication: Microservices typically communicate using lightweight protocols like HTTP/REST, gRPC, or messaging systems like Kafka.
+
+Advantages of Microservices:
+
+Scalability: Each service can scale independently.
+
+Flexibility: Microservices allow flexibility in choosing the best technology stack for each service.
+
+Faster Development: Smaller codebases allow teams to work on different services independently, enabling faster development cycles.
+
+Fault Isolation: If one service fails, it doesn’t impact other services.
+
+Maintainability: Smaller services are easier to maintain and understand.
+
+Challenges of Microservices:
+
+Complexity: The system as a whole becomes more complex to manage and monitor.
+
+Distributed Systems: Managing communication between services, such as handling network latency, can be challenging.
+
+Data Consistency: Microservices need to handle data consistency and synchronization across services.
+
+Deployment: Requires tools for continuous integration (CI) and continuous delivery (CD).
+
 
