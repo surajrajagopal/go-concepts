@@ -151,8 +151,6 @@ Concurrency In Golang:
      
 2. Goroutines - A goroutines are like functions or methods that run concurrenctly with other functions and methods. 
 
-- Goroutines are lighweighted threads.
-
 - The creation of goroutines are tiny/cheaper as compare to threads.
    
 - To create goroutines in golang we use `go` keyword to the prefix of function or methods.
@@ -392,3 +390,22 @@ Circuit Breaker: To handle service failures gracefully and avoid cascading failu
 
 Event Sourcing: Maintaining the state by persisting events that lead to state changes.
 
+Implementing Asynchronous Communication in a Real-Time Banking Application Using AWS SQS & SNS in Golang :
+
+Fan-out Messaging 📢
+
+One SNS topic → Multiple SQS queues receive the same event.
+
+Useful in banking applications where different services need transaction notifications.
+
+Example:
+
+Transaction Service publishes an event to SNS.
+
+SQS Queues:
+
+Balance Service Queue updates account balances.
+
+Fraud Detection Queue analyzes transactions.
+
+Notification Queue sends SMS/email alerts.
