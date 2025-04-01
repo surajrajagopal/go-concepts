@@ -382,4 +382,13 @@ Data Consistency: Microservices need to handle data consistency and synchronizat
 
 Deployment: Requires tools for continuous integration (CI) and continuous delivery (CD).
 
+Common Patterns in Microservices:
+
+API Gateway: A single entry point that routes requests to appropriate microservices.
+
+Service Discovery: Microservices dynamically discover each other using tools like Consul or Eureka.
+
+Circuit Breaker: To handle service failures gracefully and avoid cascading failures.
+
+Event Sourcing: Maintaining the state by persisting events that lead to state changes.
 
