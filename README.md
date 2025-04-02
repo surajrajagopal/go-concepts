@@ -9,7 +9,7 @@ Definition of all the concept :
 
    Note : we cannot update constant value and we cannot assign runtime value to constant variable.
 
-A nested for loop in Golang is a loop inside another loop. The outer loop executes once, and for each iteration of the outer loop, the inner loop runs completely    
+A nested for loop in Golang is a loop inside another loop. The outer loop executes once, and for each iteration of the outer loop, the inner loop runs completely.
 
 4. Function - A function is a block of code is used to perform specific task. At a high level, a function takes an input and returns an output. Function allows you to extract common peice of code into a single component.
 
