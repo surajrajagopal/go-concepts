@@ -73,6 +73,11 @@ A nested for loop in Golang is a loop inside another loop. The outer loop execut
 - Pass last argument to a function which will accept variable number of arguments(...) ellpsis.
 - Append slice to slice ex : append(sl, sl...)
 
+When to Use Labeled Statements?
+✅ Nested Loops → Break out of multiple loops at once.
+✅ select in a Loop → Exit the loop when a condition is met.
+✅ Complex Control Flows → Improves readability and avoids using goto.
+
 8. Map - A map is a bulit-in data type in golang which stores the data into key-values pairs.
    - Map is a reference type in golang.
    - ok (idioms)
