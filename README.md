@@ -169,6 +169,11 @@ Concurrency In Golang:
 
      The scheduler assigns goroutines to P, which then runs them on M. If a goroutine blocks (like waiting for I/O), the scheduler moves another goroutine to that thread to keep execution efficient.
 
+Goroutine Leaks in Golang: What Are They?
+  
+  A goroutine leak happens when a goroutine keeps running indefinitely or gets stuck in a blocked state (e.g., waiting on a channel that never sends data). Since Golang doesn’t provide direct goroutine management (e.g., stopping a specific goroutine), leaks can cause 
+  memory and resource exhaustion.
+
 4. Channels - Channels can be thought as a pipes by using which goroutines communications.
    - close()
      
