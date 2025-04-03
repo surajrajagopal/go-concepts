@@ -181,7 +181,17 @@ Goroutine Leaks in Golang: What Are They?
 
 4. Channels - Channels can be thought as a pipes by using which goroutines communications.
    - close()
-     
+      How This Works
+        Goroutine sends "Hello, World!" into ch.
+
+        Closes ch after sending signal no more data will be sent.
+
+        Receiver uses for msg := range ch:
+
+        Reads messages from ch.
+
+        Stops automatically when ch is closed.
+
    - for range loop
      
    - Done/quit channel (bool/struct{})
