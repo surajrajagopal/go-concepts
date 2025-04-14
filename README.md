@@ -181,7 +181,9 @@ Goroutine Leaks in Golang: What Are They?
 
 4. Channels - Channels can be thought as a pipes by using which goroutines communications.
    - close()
-      How This Works
+     
+      How This Works :
+     
         Goroutine sends "Hello, World!" into ch.
 
         Closes ch after sending signal no more data will be sent.
@@ -193,12 +195,62 @@ Goroutine Leaks in Golang: What Are They?
         Stops automatically when ch is closed.
 
    - for range loop
+
+     🔄 How for range Works on Channels
+
+       This loop does two things:
+
+       ✅ 1. Receives values from the channel (ch)
+
+       It waits (blocks) until a value is available to receive from the channel.
+
+       ✅ 2. Stops automatically when the channel is closed
+
+       Once the channel is closed and all buffered values are read, the loop exits.
+
+       Note :
+
+       If you don’t close the channel, the loop hangs forever waiting for the next value.
+
+       So, for range ch is only safe if you or someone else will close the channel.
+
+       ✅ When to Use for range ch
+
+        -  When you're sure the channel will be closed eventually.
+
+        - When you're consuming all data until it's done.
      
-   - Done/quit channel (bool/struct{})
-     
-   Channels in Go are used for communication between goroutines. They allow safe data transfer without explicit locking mechanisms.
+    - Done/quit channel (bool/struct{})
+
+      What Is a done or quit Channel?
+      
+        - A done or quit channel is a signal-only channel used to tell a goroutine:
+
+          “Hey, stop what you're doing and exit.”
+
+           It typically uses either:
+
+           chan bool — rarely preferred
+
+           ✅ chan struct{} — idiomatic and memory-efficient
+       
+       ✅ Why struct{} Instead of bool?
+
+        - struct{} is a zero-size type → uses no memory.
+
+        - We don’t care about the value — just the signal.
+
+        - It avoids accidental misuse (e.g., sending true/false with bool and adding logic).
+
+       🚫 Avoid This:
+
+        chan bool can cause accidental logic errors (e.g., waiting on a false).
+
+        It's more idiomatic to use close(done) and a receive-only check: <-done.
+
+     Channels in Go are used for communication between goroutines. They allow safe data transfer without explicit locking mechanisms.
    
-   There are two types of channels:
+     There are two types of channels:
 
       Unbuffered Channels – These don’t have a capacity. A sender must wait until a receiver reads the data. This ensures synchronization between goroutines.
 
@@ -217,7 +269,7 @@ Goroutine Leaks in Golang: What Are They?
          - Sending or receiving on a nil channel blocks forever (deadlock).
          - This is useful to disable a channel dynamically.
 
-5. Wait Group - A wait group is used to wait for collection of goroutions to finish their execution. The control block until all the goroutines completes their execution.
+4. Wait Group - A wait group is used to wait for collection of goroutions to finish their execution. The control block until all the goroutines completes their execution.
    
 7. Mutex - A mutex is locking mechanism which ensure only one goroutine can access critical section of code at any point of time. This concepts used to prevent race condition from happening.
    How does Go handle goroutine synchronization to avoid race conditions?
